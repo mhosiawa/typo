@@ -9,6 +9,8 @@ require 'factory_girl'
 require 'rexml/document'
 FactoryGirl.find_definitions
 
+DatabaseCleaner.strategy = :transaction
+
 User
 class User
   alias real_send_create_notification send_create_notification
